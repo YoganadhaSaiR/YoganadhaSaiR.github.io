@@ -29,7 +29,7 @@
       overflow-x: hidden;
     }
 
-    /* ── NAV ── */
+    /* ââ NAV ââ */
     nav {
       position: fixed; top: 0; width: 100%; z-index: 100;
       background: rgba(10,14,26,0.85);
@@ -43,7 +43,7 @@
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--accent); }
 
-    /* ── SECTIONS ── */
+    /* ââ SECTIONS ââ */
     section { padding: 90px 60px; max-width: 1200px; margin: 0 auto; }
     .section-label {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 3px;
@@ -58,7 +58,7 @@
       border-radius: 2px; margin-bottom: 48px;
     }
 
-    /* ── HERO ── */
+    /* ââ HERO ââ */
     #hero {
       min-height: 100vh;
       display: flex; flex-direction: column; justify-content: center;
@@ -80,7 +80,7 @@
       padding: 6px 16px; font-size: 0.8rem; font-weight: 600;
       margin-bottom: 24px; width: fit-content;
     }
-    .hero-badge::before { content: '●'; animation: pulse 2s infinite; }
+    .hero-badge::before { content: 'â'; animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
     h1.hero-name {
       font-size: clamp(2.8rem, 6vw, 5rem);
@@ -120,7 +120,7 @@
     .stat-value { font-size: 2rem; font-weight: 800; color: var(--accent); }
     .stat-label { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
 
-    /* ── WHAT I DO ── */
+    /* ââ WHAT I DO ââ */
     .role-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
     .role-card {
       background: var(--card); border: 1px solid var(--border);
@@ -132,7 +132,7 @@
     .role-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 10px; }
     .role-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
 
-    /* ── PROJECTS ── */
+    /* ââ PROJECTS ââ */
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
     .project-card {
       background: var(--card); border: 1px solid var(--border);
@@ -143,7 +143,7 @@
     .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
     .project-card.featured { border-color: var(--accent); }
     .project-card.featured::before {
-      content: '⭐ FEATURED'; position: absolute; top: 16px; right: 16px;
+      content: 'â­ FEATURED'; position: absolute; top: 16px; right: 16px;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       color: #fff; font-size: 0.65rem; font-weight: 800; letter-spacing: 1.5px;
       padding: 4px 10px; border-radius: 20px;
@@ -172,7 +172,7 @@
     .tag-gold { background: rgba(245,158,11,0.12); color: #fcd34d; border: 1px solid rgba(245,158,11,0.2); }
     .tag-red { background: rgba(239,68,68,0.12); color: #fca5a5; border: 1px solid rgba(239,68,68,0.2); }
 
-    /* ── SKILLS ── */
+    /* ââ SKILLS ââ */
     .skills-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
     .skill-group { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; }
     .skill-group h3 { font-size: 0.9rem; font-weight: 700; color: var(--accent2); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
@@ -181,7 +181,7 @@
     .skill-bar { background: rgba(255,255,255,0.06); border-radius: 4px; height: 6px; overflow: hidden; }
     .skill-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
 
-    /* ── EXPERIENCE ── */
+    /* ââ EXPERIENCE ââ */
     .timeline { position: relative; padding-left: 32px; }
     .timeline::before {
       content: ''; position: absolute; left: 0; top: 0; bottom: 0;
@@ -202,9 +202,9 @@
       font-size: 0.875rem; color: var(--muted); padding: 6px 0 6px 20px;
       position: relative; line-height: 1.65;
     }
-    .timeline-points li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
+    .timeline-points li::before { content: 'â'; position: absolute; left: 0; color: var(--accent); }
 
-    /* ── AI AGENT SPOTLIGHT ── */
+    /* ââ AI AGENT SPOTLIGHT ââ */
     .agent-spotlight {
       background: var(--card);
       border: 1px solid var(--border);
@@ -230,7 +230,7 @@
     .cap-title { font-size: 0.85rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
     .cap-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
 
-    /* ── LEARNING ── */
+    /* ââ LEARNING ââ */
     .learning-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
     .learning-card {
       background: var(--card); border: 1px solid var(--border);
@@ -241,7 +241,7 @@
     .learning-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
     .learning-card p { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
 
-    /* ── LIFE SKILLS ── */
+    /* ââ LIFE SKILLS ââ */
     .lifeskills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
     .lifeskill-card {
       background: var(--card); border: 1px solid var(--border);
@@ -259,7 +259,7 @@
     .lifeskill-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
     .lifeskill-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
 
-    /* ── PIPELINE ── */
+    /* ââ PIPELINE ââ */
     .pipeline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
     .pipeline-card {
       background: var(--card); border: 1px solid var(--border);
@@ -280,7 +280,7 @@
     .pipeline-card h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
     .pipeline-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
 
-    /* ── FOOTER ── */
+    /* ââ FOOTER ââ */
     footer {
       text-align: center; padding: 60px 40px 40px;
       border-top: 1px solid var(--border);
@@ -289,7 +289,7 @@
     footer .footer-name { font-size: 1.4rem; font-weight: 800; color: var(--text); margin-bottom: 8px; }
     footer .footer-contact { color: var(--accent); font-size: 0.9rem; margin-bottom: 20px; }
 
-    /* ── RESPONSIVE ── */
+    /* ââ RESPONSIVE ââ */
     @media (max-width: 768px) {
       nav { padding: 14px 20px; }
       section { padding: 70px 20px; }
@@ -298,7 +298,7 @@
       .nav-links { display: none; }
     }
 
-    /* ── ANIMATIONS ── */
+    /* ââ ANIMATIONS ââ */
     .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
   </style>
@@ -330,7 +330,7 @@
   </p>
   <div class="hero-cta">
     <a href="#projects" class="btn-primary">View My Work</a>
-    <a href="#agent" class="btn-outline">Meet Krish AI Agent →</a>
+    <a href="#agent" class="btn-outline">Meet Krish AI Agent â</a>
   </div>
   <div class="hero-stats">
     <div class="stat">
@@ -346,7 +346,7 @@
       <div class="stat-label">AI Projects Active</div>
     </div>
     <div class="stat">
-      <div class="stat-value">∞</div>
+      <div class="stat-value">â</div>
       <div class="stat-label">Curiosity</div>
     </div>
   </div>
@@ -359,22 +359,22 @@
   <div class="section-divider"></div>
   <div class="role-cards">
     <div class="role-card fade-in">
-      <div class="role-icon">☕</div>
+      <div class="role-icon">â</div>
       <h3>Java & Spring Boot Engineer</h3>
       <p>Designing scalable microservices for high-TPS banking platforms. Deep expertise in Spring Boot, REST APIs, Oracle PL/SQL, Kubernetes, and AWS cloud services.</p>
     </div>
     <div class="role-card fade-in">
-      <div class="role-icon">🤖</div>
+      <div class="role-icon">ð¤</div>
       <h3>AI Agent Builder</h3>
       <p>Building autonomous AI agents with multi-agent orchestration, subagent task delegation, token optimization, and real-world automation. Built on engineering principles, not just prompting.</p>
     </div>
     <div class="role-card fade-in">
-      <div class="role-icon">🔥</div>
+      <div class="role-icon">ð¥</div>
       <h3>Production Support Expert</h3>
       <p>Handled real-time banking incidents in MUFG project using Dynatrace and Splunk. Trained to stay calm when systems are on fire and fix them faster.</p>
     </div>
     <div class="role-card fade-in">
-      <div class="role-icon">⚡</div>
+      <div class="role-icon">â¡</div>
       <h3>Quick Learner & Vibe Coder</h3>
       <p>Actively upskilling in RAG systems, voice AI, vision AI, and LLM optimization. I build real MVPs for ideas, not just read about them.</p>
     </div>
@@ -391,11 +391,11 @@
     <!-- Project 1: Databricks DDL Automation -->
     <div class="project-card featured fade-in">
       <div class="project-header">
-        <span class="project-emoji">🏗️</span>
+        <span class="project-emoji">ðï¸</span>
         <h3>Databricks DDL Automation Platform</h3>
       </div>
       <p>Eliminated manual DevOps overhead for data engineering teams. Built a full-stack platform where teams upload SQL DDL files via a web UI, and the system automatically parses the DDL, identifies the target repo and branch from embedded metadata, restructures the DDL into GitHub Actions-ready format, and triggers CI/CD workflows to create Databricks tables with zero manual intervention.</p>
-      <div class="project-impact">⚡ Impact: Reduced table provisioning from hours of manual work to a single file upload</div>
+      <div class="project-impact">â¡ Impact: Reduced table provisioning from hours of manual work to a single file upload</div>
       <div class="project-tech">
         <span class="tag tag-blue">Python</span>
         <span class="tag tag-purple">GitHub Actions</span>
@@ -410,11 +410,11 @@
     <!-- Project 2: Krish AI Agent -->
     <div class="project-card featured fade-in">
       <div class="project-header">
-        <span class="project-emoji">🧠</span>
+        <span class="project-emoji">ð§ </span>
         <h3>Krish: Personal AI Agent System</h3>
       </div>
       <p>Built an autonomous AI agent workspace on OpenClaw/Claude with a multi-agent architecture. Implemented advanced token optimization strategies, subagent task delegation per domain, and scheduled automations that run ideas autonomously. The system handles multi-step workflows with specialized agents for different task types.</p>
-      <div class="project-impact">🎯 Architecture: Multi-agent orchestration with token-efficient subagents per task domain</div>
+      <div class="project-impact">ð¯ Architecture: Multi-agent orchestration with token-efficient subagents per task domain</div>
       <div class="project-tech">
         <span class="tag tag-purple">Claude AI</span>
         <span class="tag tag-blue">Multi-Agent</span>
@@ -425,30 +425,14 @@
       </div>
     </div>
 
-    <!-- Project 3: Voice Agent -->
-    <div class="project-card fade-in">
-      <div class="project-header">
-        <span class="project-emoji">🎙️</span>
-        <h3>Voice AI Agent (In Development)</h3>
-      </div>
-      <p>Actively building a voice-enabled AI agent from scratch, learning ASR pipelines, TTS synthesis, intent detection, and real-time conversation management. Exploring integration with LLM backends for intelligent, voice-driven task execution.</p>
-      <div class="project-impact">📚 Learning: ASR → LLM → TTS pipeline architecture in real-time</div>
-      <div class="project-tech">
-        <span class="tag tag-purple">Voice AI</span>
-        <span class="tag tag-blue">ASR / TTS</span>
-        <span class="tag tag-green">LLM Integration</span>
-        <span class="tag tag-gold">Real-time Processing</span>
-      </div>
-    </div>
-
     <!-- Project 4: Vision AI Model -->
     <div class="project-card fade-in">
       <div class="project-header">
-        <span class="project-emoji">👁️</span>
+        <span class="project-emoji">ðï¸</span>
         <h3>Vision AI Model</h3>
       </div>
       <p>Building a computer vision model capable of real-time object detection, image classification, and scene understanding. Exploring deep learning architectures including CNNs and transformer-based vision models to solve practical recognition problems with high accuracy.</p>
-      <div class="project-impact">🎯 Goal: Production-grade vision inference with optimized model pipelines</div>
+      <div class="project-impact">ð¯ Goal: Production-grade vision inference with optimized model pipelines</div>
       <div class="project-tech">
         <span class="tag tag-blue">Computer Vision</span>
         <span class="tag tag-purple">Deep Learning</span>
@@ -461,11 +445,11 @@
     <!-- Project 5: Chakra Safety App -->
     <div class="project-card fade-in">
       <div class="project-header">
-        <span class="project-emoji">🛡️</span>
+        <span class="project-emoji">ð¡ï¸</span>
         <h3>Chakra Safety App</h3>
       </div>
       <p>Designing a personal and community safety application with real-time location sharing, emergency SOS triggers, and AI-powered threat detection. Built with a mobile-first architecture, integrating push notifications, geofencing, and secure backend services to deliver rapid response in critical situations.</p>
-      <div class="project-impact">🚨 Focus: Real-time safety alerts and emergency response coordination</div>
+      <div class="project-impact">ð¨ Focus: Real-time safety alerts and emergency response coordination</div>
       <div class="project-tech">
         <span class="tag tag-purple">Mobile App</span>
         <span class="tag tag-blue">Spring Boot</span>
@@ -478,11 +462,11 @@
     <!-- Project 6: Bluecollar Marketplace -->
     <div class="project-card fade-in">
       <div class="project-header">
-        <span class="project-emoji">🔧</span>
+        <span class="project-emoji">ð§</span>
         <h3>Bluecollar Marketplace</h3>
       </div>
       <p>Building a two-sided marketplace platform connecting skilled blue-collar workers (electricians, plumbers, HVAC technicians) with homeowners and businesses. Features include verified worker profiles, real-time booking, in-app payments, job tracking, and review systems to bring trust and transparency to skilled-trade hiring.</p>
-      <div class="project-impact">💡 Vision: Democratizing access to skilled trades through technology</div>
+      <div class="project-impact">ð¡ Vision: Democratizing access to skilled trades through technology</div>
       <div class="project-tech">
         <span class="tag tag-blue">Java / Spring Boot</span>
         <span class="tag tag-purple">React.js</span>
@@ -505,7 +489,7 @@
       <div class="agent-avatar">K</div>
       <div>
         <div class="agent-name">Krish AI Agent</div>
-        <div class="agent-desc">Autonomous Agent System · Built on OpenClaw / Claude</div>
+        <div class="agent-desc">Autonomous Agent System Â· Built on OpenClaw / Claude</div>
       </div>
     </div>
     <p style="color:var(--muted); font-size:0.9rem; line-height:1.75; margin-bottom:24px;">
@@ -516,22 +500,22 @@
     </p>
     <div class="agent-capabilities">
       <div class="cap-card">
-        <div class="cap-icon">🏗️</div>
+        <div class="cap-icon">ðï¸</div>
         <div class="cap-title">Multi-Agent Architecture</div>
         <div class="cap-desc">Designed subagent orchestration where each agent specializes in a specific domain/task type</div>
       </div>
       <div class="cap-card">
-        <div class="cap-icon">⚡</div>
+        <div class="cap-icon">â¡</div>
         <div class="cap-title">Token Optimization</div>
         <div class="cap-desc">Implemented strategies to reduce token consumption in long-running agent sessions without losing context</div>
       </div>
       <div class="cap-card">
-        <div class="cap-icon">⏰</div>
+        <div class="cap-icon">â°</div>
         <div class="cap-title">Scheduled Automations</div>
         <div class="cap-desc">Autonomous workflows that run on triggers and schedules, ideas that execute themselves</div>
       </div>
       <div class="cap-card">
-        <div class="cap-icon">🎯</div>
+        <div class="cap-icon">ð¯</div>
         <div class="cap-title">Task Delegation</div>
         <div class="cap-desc">Intelligent routing of tasks to appropriate subagents based on task type and context requirements</div>
       </div>
@@ -549,9 +533,9 @@
     <!-- Role 1: Optum -->
     <div class="timeline-item fade-in">
       <div class="timeline-dot"></div>
-      <div class="timeline-meta">APR 2025 – PRESENT · Healthcare Technology</div>
+      <div class="timeline-meta">APR 2025 â PRESENT Â· Healthcare Technology</div>
       <div class="timeline-role">Senior Software Engineer</div>
-      <div class="timeline-company">Optum (UnitedHealth Group) · Morrisville, NC</div>
+      <div class="timeline-company">Optum (UnitedHealth Group) Â· Morrisville, NC</div>
       <ul class="timeline-points">
         <li>Developed Spring Boot RESTful microservices using Java 17 features including records for immutable DTOs, sealed classes for domain modeling, and text blocks for SQL templates; refactored legacy monolithic modules into independently deployable services with custom exception handling via @ControllerAdvice</li>
         <li>Participated in Azure infrastructure setup, configuring Azure App Services, VNets, NSGs, and private endpoints in coordination with DevOps teams for secure service deployment</li>
@@ -568,7 +552,7 @@
     <!-- Role 2: Eficens Systems -->
     <div class="timeline-item fade-in">
       <div class="timeline-dot"></div>
-      <div class="timeline-meta">JAN 2023 – MAR 2025 · Healthcare Technology</div>
+      <div class="timeline-meta">JAN 2023 â MAR 2025 Â· Healthcare Technology</div>
       <div class="timeline-role">Software Engineer</div>
       <div class="timeline-company">Eficens Systems</div>
       <ul class="timeline-points">
@@ -588,7 +572,7 @@
     <!-- Role 3: MUFG -->
     <div class="timeline-item fade-in">
       <div class="timeline-dot"></div>
-      <div class="timeline-meta">SEP 2020 – DEC 2021 · Banking & Financial Services</div>
+      <div class="timeline-meta">SEP 2020 â DEC 2021 Â· Banking & Financial Services</div>
       <div class="timeline-role">Full Stack Developer</div>
       <div class="timeline-company">MUFG Union Bank</div>
       <ul class="timeline-points">
@@ -605,7 +589,7 @@
     <!-- Role 4: Chai Point -->
     <div class="timeline-item fade-in">
       <div class="timeline-dot"></div>
-      <div class="timeline-meta">NOV 2019 – SEP 2020 · Retail & Food Technology</div>
+      <div class="timeline-meta">NOV 2019 â SEP 2020 Â· Retail & Food Technology</div>
       <div class="timeline-role">Java/J2EE Developer</div>
       <div class="timeline-company">Chai Point, India</div>
       <ul class="timeline-points">
@@ -630,7 +614,7 @@
   <div class="skills-layout">
 
     <div class="skill-group fade-in">
-      <h3>☕ Java & Core Languages</h3>
+      <h3>â Java & Core Languages</h3>
       <div class="skill-item">
         <div class="skill-name"><span>Java 17 / 11 / 8</span><span>Expert</span></div>
         <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
@@ -658,7 +642,7 @@
     </div>
 
     <div class="skill-group fade-in">
-      <h3>☁️ Cloud: Azure and AWS</h3>
+      <h3>âï¸ Cloud: Azure and AWS</h3>
       <div class="skill-item">
         <div class="skill-name"><span>Azure App Services, AKS, Service Bus, DevOps</span><span>Advanced</span></div>
         <div class="skill-bar"><div class="skill-fill" style="width:83%; background:linear-gradient(90deg,#0078d4,#3b82f6);"></div></div>
@@ -682,7 +666,7 @@
     </div>
 
     <div class="skill-group fade-in">
-      <h3>🗄️ Databases</h3>
+      <h3>ðï¸ Databases</h3>
       <div class="skill-item">
         <div class="skill-name"><span>Oracle / PL/SQL (Stored Procs, Triggers)</span><span>Expert</span></div>
         <div class="skill-bar"><div class="skill-fill" style="width:88%; background:linear-gradient(90deg,#f59e0b,#ef4444);"></div></div>
@@ -698,7 +682,7 @@
     </div>
 
     <div class="skill-group fade-in">
-      <h3>🖥️ Front-End & DevOps</h3>
+      <h3>ð¥ï¸ Front-End & DevOps</h3>
       <div class="skill-item">
         <div class="skill-name"><span>React.JS / Redux / Angular / HTML5 / CSS3</span><span>Advanced</span></div>
         <div class="skill-bar"><div class="skill-fill" style="width:80%; background:linear-gradient(90deg,#8b5cf6,#3b82f6);"></div></div>
@@ -718,7 +702,7 @@
     </div>
 
     <div class="skill-group fade-in">
-      <h3>🤖 AI & Emerging Tech</h3>
+      <h3>ð¤ AI & Emerging Tech</h3>
       <div class="skill-item">
         <div class="skill-name"><span>AI Agent Design & Orchestration</span><span>Building</span></div>
         <div class="skill-bar"><div class="skill-fill" style="width:80%; background:linear-gradient(90deg,var(--accent2),var(--accent));"></div></div>
@@ -751,28 +735,28 @@
   <div class="section-divider"></div>
   <div class="learning-grid">
     <div class="learning-card fade-in">
-      <div class="learning-icon">🎙️</div>
+      <div class="learning-icon">ðï¸</div>
       <div>
         <h4>Voice Agent Architecture</h4>
-        <p>Building voice AI from ASR → intent → LLM → TTS pipelines. Real implementation, not tutorials.</p>
+        <p>Building voice AI from ASR â intent â LLM â TTS pipelines. Real implementation, not tutorials.</p>
       </div>
     </div>
     <div class="learning-card fade-in">
-      <div class="learning-icon">📚</div>
+      <div class="learning-icon">ð</div>
       <div>
         <h4>RAG in Production</h4>
         <p>How RAG actually works at scale: vector retrieval, re-ranking, context injection, and hallucination prevention.</p>
       </div>
     </div>
     <div class="learning-card fade-in">
-      <div class="learning-icon">👁️</div>
+      <div class="learning-icon">ðï¸</div>
       <div>
         <h4>Vision AI Systems</h4>
         <p>Exploring computer vision for real-world applications including safety monitoring, object detection, and multimodal AI.</p>
       </div>
     </div>
     <div class="learning-card fade-in">
-      <div class="learning-icon">🔧</div>
+      <div class="learning-icon">ð§</div>
       <div>
         <h4>Vibe Coding</h4>
         <p>Rapid prototyping with AI assistance, shipping working MVPs for ideas faster than ever before.</p>
@@ -792,7 +776,7 @@
   <div class="lifeskills-grid">
 
     <div class="lifeskill-card fade-in">
-      <span class="lifeskill-icon">❄️</span>
+      <span class="lifeskill-icon">âï¸</span>
       <h3>HVAC Systems</h3>
       <p>Deep practical knowledge of heating, ventilation, and air conditioning systems, from residential units to commercial-grade installations. Understand refrigeration cycles, ductwork, airflow dynamics, thermostat control logic, and troubleshooting fault conditions.</p>
       <div class="lifeskill-tags">
@@ -803,7 +787,7 @@
     </div>
 
     <div class="lifeskill-card fade-in">
-      <span class="lifeskill-icon">⚡</span>
+      <span class="lifeskill-icon">â¡</span>
       <h3>Electrical Systems</h3>
       <p>Strong understanding of electrical systems covering wiring, circuits, panels, load calculations, and safety standards. Comfortable reading schematics, diagnosing faults, and working with both low-voltage control systems and mains electrical.</p>
       <div class="lifeskill-tags">
@@ -814,7 +798,7 @@
     </div>
 
     <div class="lifeskill-card fade-in">
-      <span class="lifeskill-icon">🚗</span>
+      <span class="lifeskill-icon">ð</span>
       <h3>Automobiles & Automotive Systems</h3>
       <p>Enthusiast-level knowledge of automobiles including engines, drivetrain, suspension, electronics, and diagnostics. Follow the automotive industry closely including EV architectures, ADAS systems, and the shift toward software-defined vehicles.</p>
       <div class="lifeskill-tags">
@@ -825,7 +809,7 @@
     </div>
 
     <div class="lifeskill-card fade-in">
-      <span class="lifeskill-icon">🤖</span>
+      <span class="lifeskill-icon">ð¤</span>
       <h3>Robotics & Mechanical Systems</h3>
       <p>Actively exploring robotics including servo systems, actuators, sensor fusion, and embedded control. Fascinated by the intersection of mechanical engineering and software, particularly how AI is being applied to physical systems and automation.</p>
       <div class="lifeskill-tags">
@@ -836,7 +820,7 @@
     </div>
 
     <div class="lifeskill-card fade-in">
-      <span class="lifeskill-icon">🚙</span>
+      <span class="lifeskill-icon">ð</span>
       <h3>Autonomous Vehicles</h3>
       <p>Deep interest in self-driving technology including LiDAR, radar, camera sensor stacks, path planning algorithms, and the software architectures powering autonomous systems. Follow developments across Waymo, Tesla FSD, and open-source AV platforms closely.</p>
       <div class="lifeskill-tags">
@@ -848,7 +832,7 @@
     </div>
 
     <div class="lifeskill-card fade-in">
-      <span class="lifeskill-icon">🔬</span>
+      <span class="lifeskill-icon">ð¬</span>
       <h3>Emerging Tech Explorer</h3>
       <p>Always investigating what's next in the physical world including new materials, energy systems, precision mechanics, and how software is transforming industries like manufacturing, construction, and infrastructure. Curiosity is the skill that never depreciates.</p>
       <div class="lifeskill-tags">
@@ -869,27 +853,17 @@
   <p style="color:var(--muted); margin-bottom:36px; font-size:0.95rem;">Ideas I am actively building. Not someday projects. Real MVPs in progress.</p>
   <div class="pipeline-grid">
     <div class="pipeline-card fade-in">
-      <span class="pipeline-emoji">🛡️</span>
+      <span class="pipeline-emoji">ð¡ï¸</span>
       <h3>Chakra Safety App</h3>
       <p>Personal safety application leveraging real-time location, emergency contacts, and AI-powered threat detection to keep users safe.</p>
     </div>
     <div class="pipeline-card fade-in">
-      <span class="pipeline-emoji">🔧</span>
+      <span class="pipeline-emoji">ð§</span>
       <h3>BlueCollar Marketplace</h3>
       <p>Connecting skilled tradespeople with customers like plumbers, electricians, and carpenters, with verified profiles, booking, and payments.</p>
     </div>
-    <div class="pipeline-card fade-in">
-      <span class="pipeline-emoji">🌐</span>
-      <h3>Professional Social Network</h3>
-      <p>A focused networking platform for professionals, founders, and students, built for depth of connection, not vanity metrics.</p>
-    </div>
-    <div class="pipeline-card fade-in">
-      <span class="pipeline-emoji">🎙️</span>
-      <h3>Voice Agents Platform</h3>
-      <p>Productized voice AI agents that handle real-world tasks through conversation: scheduling, queries, workflows, and more.</p>
-    </div>
-    <div class="pipeline-card fade-in">
-      <span class="pipeline-emoji">👁️</span>
+<div class="pipeline-card fade-in">
+      <span class="pipeline-emoji">ðï¸</span>
       <h3>Vision AI Systems</h3>
       <p>Computer vision applications for safety, monitoring, and automation, from edge deployment to cloud-based inference APIs.</p>
     </div>
@@ -903,13 +877,13 @@
   <div class="section-divider"></div>
   <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;">
     <div style="background:var(--card); border:1px solid var(--border); border-radius:14px; padding:28px; border-top:3px solid var(--accent);">
-      <div style="font-size:2rem; margin-bottom:12px;">🎓</div>
+      <div style="font-size:2rem; margin-bottom:12px;">ð</div>
       <div style="font-size:0.75rem; color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Graduate Degree</div>
       <div style="font-size:1.1rem; font-weight:800; color:var(--text); margin-bottom:6px;">Master of Science, Computer Science</div>
       <div style="font-size:0.9rem; color:var(--muted);">University of Central Missouri</div>
     </div>
     <div style="background:var(--card); border:1px solid var(--border); border-radius:14px; padding:28px; border-top:3px solid var(--accent2);">
-      <div style="font-size:2rem; margin-bottom:12px;">🎓</div>
+      <div style="font-size:2rem; margin-bottom:12px;">ð</div>
       <div style="font-size:0.75rem; color:var(--accent2); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Undergraduate Degree</div>
       <div style="font-size:1.1rem; font-weight:800; color:var(--text); margin-bottom:6px;">Bachelor of Technology</div>
       <div style="font-size:0.9rem; color:var(--muted);">Vel Tech University</div>
@@ -920,12 +894,12 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-name">Yoganadha Rayala</div>
-  <div class="footer-contact">rayalayoganadhasai@gmail.com &nbsp;·&nbsp; (913) 326-7371 &nbsp;·&nbsp; Morrisville, NC</div>
+  <div class="footer-contact">rayalayoganadhasai@gmail.com &nbsp;Â·&nbsp; (913) 326-7371 &nbsp;Â·&nbsp; Morrisville, NC</div>
   <div style="display:flex; justify-content:center; gap:24px; margin-bottom:20px;">
-    <a href="https://github.com/AgentKrish9" target="_blank" style="color:var(--accent); text-decoration:none; font-size:0.85rem; font-weight:600;">GitHub →</a>
-    <a href="https://github.com/YoganadhaSaiR" target="_blank" style="color:var(--accent); text-decoration:none; font-size:0.85rem; font-weight:600;">GitHub (Personal) →</a>
+    <a href="https://github.com/AgentKrish9" target="_blank" style="color:var(--accent); text-decoration:none; font-size:0.85rem; font-weight:600;">GitHub â</a>
+    <a href="https://github.com/YoganadhaSaiR" target="_blank" style="color:var(--accent); text-decoration:none; font-size:0.85rem; font-weight:600;">GitHub (Personal) â</a>
   </div>
-  <p style="font-size:0.78rem; opacity:0.5;">Java Full Stack Engineer · AI Builder · Always Building Something</p>
+  <p style="font-size:0.78rem; opacity:0.5;">Java Full Stack Engineer Â· AI Builder Â· Always Building Something</p>
 </footer>
 
 <script>
