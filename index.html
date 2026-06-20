@@ -125,9 +125,9 @@
     .role-card {
       background: var(--card); border: 1px solid var(--border);
       border-radius: 12px; padding: 28px;
-      transition: transform 0.2s, border-color 0.2s;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
     }
-    .role-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .role-card:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 8px 32px rgba(59,130,246,0.15); }
     .role-icon { font-size: 2rem; margin-bottom: 14px; }
     .role-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 10px; }
     .role-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
@@ -140,7 +140,7 @@
       transition: transform 0.25s, box-shadow 0.25s;
       position: relative;
     }
-    .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+    .project-card:hover { transform: translateY(-8px); box-shadow: 0 24px 50px rgba(0,0,0,0.5), 0 0 30px rgba(59,130,246,0.18); }
     .project-card.featured { border-color: var(--accent); }
     .project-card.featured::before {
       content: '⭐ FEATURED'; position: absolute; top: 16px; right: 16px;
@@ -253,7 +253,7 @@
       content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
       background: linear-gradient(90deg, var(--gold), #f97316);
     }
-    .lifeskill-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+    .lifeskill-card:hover { transform: translateY(-6px); border-color: var(--gold); box-shadow: 0 12px 36px rgba(0,0,0,0.3), 0 0 20px rgba(245,158,11,0.12); }
     .lifeskill-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
     .lifeskill-card h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 10px; }
     .lifeskill-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
@@ -267,7 +267,7 @@
       position: relative; overflow: hidden;
       transition: transform 0.2s, border-color 0.2s;
     }
-    .pipeline-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+    .pipeline-card:hover { transform: translateY(-6px); border-color: var(--gold); box-shadow: 0 12px 36px rgba(0,0,0,0.3), 0 0 20px rgba(245,158,11,0.12); }
     .pipeline-card::after {
       content: 'IN PIPELINE';
       position: absolute; top: 16px; right: -12px;
@@ -299,8 +299,76 @@
     }
 
     /* ── ANIMATIONS ── */
-    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* Staggered delays for grid children */
+    .fade-in:nth-child(2) { transition-delay: 0.08s; }
+    .fade-in:nth-child(3) { transition-delay: 0.16s; }
+    .fade-in:nth-child(4) { transition-delay: 0.24s; }
+    .fade-in:nth-child(5) { transition-delay: 0.32s; }
+    .fade-in:nth-child(6) { transition-delay: 0.40s; }
+
+    /* Hero entrance */
+    @keyframes heroSlide {
+      from { opacity: 0; transform: translateX(-30px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    h1.hero-name  { animation: heroSlide 0.8s 0.1s ease-out both; }
+    .hero-title   { animation: heroSlide 0.8s 0.25s ease-out both; }
+    .hero-desc    { animation: heroSlide 0.8s 0.4s ease-out both; }
+    .hero-cta     { animation: heroSlide 0.8s 0.55s ease-out both; }
+    .hero-stats   { animation: heroSlide 0.8s 0.7s ease-out both; }
+    .hero-badge   { animation: heroSlide 0.8s 0s ease-out both; }
+
+    /* Floating hero background */
+    .hero-bg { animation: bgFloat 10s ease-in-out infinite alternate; }
+    @keyframes bgFloat {
+      0%   { transform: scale(1) translateY(0); }
+      100% { transform: scale(1.06) translateY(-12px); }
+    }
+
+    /* Skill bar animation */
+    .skill-fill { width: 0 !important; transition: width 1.3s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+    .skill-fill.bar-animated { width: var(--bar-width) !important; }
+
+    /* Nav active underline */
+    .nav-links a { position: relative; }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 2px; background: var(--accent);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-links a.active { color: var(--accent); }
+    .nav-links a.active::after { transform: scaleX(1); }
+
+    /* Capability card hover */
+    .cap-card { transition: transform 0.25s, background 0.25s, border-color 0.25s; cursor: default; }
+    .cap-card:hover { transform: translateY(-4px); background: rgba(139,92,246,0.14); border-color: rgba(139,92,246,0.5); }
+
+    /* Learning card hover */
+    .learning-card { transition: transform 0.25s, border-color 0.25s, background 0.25s; }
+    .learning-card:hover { transform: translateY(-4px); border-color: var(--accent); background: rgba(59,130,246,0.05); }
+
+    /* Skill group hover */
+    .skill-group { transition: border-color 0.3s; }
+    .skill-group:hover { border-color: rgba(59,130,246,0.4); }
+
+    /* Timeline dot pulse on hover */
+    .timeline-item { transition: transform 0.2s; }
+    .timeline-dot { transition: box-shadow 0.3s; }
+    .timeline-item:hover .timeline-dot { box-shadow: 0 0 16px var(--accent), 0 0 32px rgba(59,130,246,0.35); }
+
+    /* Button glow on hover */
+    .btn-primary { position: relative; overflow: hidden; }
+    .btn-primary::after {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,0.18) 0%, transparent 65%);
+      opacity: 0; transition: opacity 0.3s; pointer-events: none;
+    }
+    .btn-primary:hover::after { opacity: 1; }
   </style>
 </head>
 <body>
@@ -355,13 +423,13 @@
 <!-- WHAT I DO -->
 <section id="about">
   <div class="section-label">What I Do</div>
-  <h2 class="section-title">Engineer by Day. Builder by Night.</h2>
+  <h2 class="section-title">Full Stack Engineer. Technology Enthusiast.</h2>
   <div class="section-divider"></div>
   <div class="role-cards">
     <div class="role-card fade-in">
       <div class="role-icon">☕</div>
       <h3>Java & Spring Boot Engineer</h3>
-      <p>Designing scalable microservices for high-TPS banking platforms. Deep expertise in Spring Boot, REST APIs, Oracle PL/SQL, Kubernetes, and AWS cloud services.</p>
+      <p>Building enterprise-grade Spring Boot microservices across healthcare and banking domains. Expert in REST/SOAP APIs, Spring Security, Oracle/PL/SQL, AWS EKS, Azure AKS, and cloud-native architectures with 6+ years of production experience.</p>
     </div>
     <div class="role-card fade-in">
       <div class="role-icon">🤖</div>
@@ -422,6 +490,24 @@
         <span class="tag tag-gold">Automation</span>
         <span class="tag tag-purple">Subagent Design</span>
         <span class="tag tag-blue">Workflow Orchestration</span>
+      </div>
+    </div>
+
+    <!-- Project 3: Food Delivery Platform -->
+    <div class="project-card fade-in">
+      <div class="project-header">
+        <span class="project-emoji">🍔</span>
+        <h3>Food Delivery Platform — Microservices on AWS EKS</h3>
+      </div>
+      <p>Built a production-grade multi-service food delivery platform with independently deployable Spring Boot 3 services for order, catalog, payment, and notification domains. Deployed to AWS EKS behind an ALB with GitOps-based releases via ArgoCD, using MongoDB Atlas and AWS RDS for persistence.</p>
+      <div class="project-impact">🚀 Architecture: Full GitOps pipeline with ArgoCD, Jenkins & GitHub Actions on AWS EKS</div>
+      <div class="project-tech">
+        <span class="tag tag-blue">Java 17 / Spring Boot 3</span>
+        <span class="tag tag-purple">AWS EKS / ArgoCD</span>
+        <span class="tag tag-green">MongoDB Atlas</span>
+        <span class="tag tag-gold">GitHub Actions</span>
+        <span class="tag tag-blue">Angular</span>
+        <span class="tag tag-green">Jenkins CI/CD</span>
       </div>
     </div>
 
@@ -876,15 +962,22 @@
   <h2 class="section-title">Academic Background</h2>
   <div class="section-divider"></div>
   <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;">
+    <div style="background:var(--card); border:1px solid var(--border); border-radius:14px; padding:28px; border-top:3px solid var(--accent2); position:relative;">
+      <div style="position:absolute;top:16px;right:16px;background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.3);color:var(--accent2);font-size:0.65rem;font-weight:800;letter-spacing:1px;padding:3px 10px;border-radius:20px;">IN PROGRESS</div>
+      <div style="font-size:2rem; margin-bottom:12px;">🎓</div>
+      <div style="font-size:0.75rem; color:var(--accent2); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Doctoral Degree</div>
+      <div style="font-size:1.1rem; font-weight:800; color:var(--text); margin-bottom:6px;">Ph.D., Information Technology (AI Specialization)</div>
+      <div style="font-size:0.9rem; color:var(--muted);">University of the Cumberlands</div>
+    </div>
     <div style="background:var(--card); border:1px solid var(--border); border-radius:14px; padding:28px; border-top:3px solid var(--accent);">
       <div style="font-size:2rem; margin-bottom:12px;">🎓</div>
       <div style="font-size:0.75rem; color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Graduate Degree</div>
       <div style="font-size:1.1rem; font-weight:800; color:var(--text); margin-bottom:6px;">Master of Science, Computer Science</div>
       <div style="font-size:0.9rem; color:var(--muted);">University of Central Missouri</div>
     </div>
-    <div style="background:var(--card); border:1px solid var(--border); border-radius:14px; padding:28px; border-top:3px solid var(--accent2);">
+    <div style="background:var(--card); border:1px solid var(--border); border-radius:14px; padding:28px; border-top:3px solid var(--gold);">
       <div style="font-size:2rem; margin-bottom:12px;">🎓</div>
-      <div style="font-size:0.75rem; color:var(--accent2); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Undergraduate Degree</div>
+      <div style="font-size:0.75rem; color:var(--gold); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Undergraduate Degree</div>
       <div style="font-size:1.1rem; font-weight:800; color:var(--text); margin-bottom:6px;">Bachelor of Technology</div>
       <div style="font-size:0.9rem; color:var(--muted);">Vel Tech University</div>
     </div>
@@ -903,18 +996,78 @@
 </footer>
 
 <script>
-  // Scroll animations
+  // ── Scroll fade-in ──
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
   }, { threshold: 0.1 });
-
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // Smooth scroll for nav links
+  // ── Skill bar animation ──
+  document.querySelectorAll('.skill-fill').forEach(el => {
+    el.style.setProperty('--bar-width', el.style.width);
+    el.style.removeProperty('width');
+  });
+  const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.skill-fill').forEach((fill, i) => {
+          setTimeout(() => fill.classList.add('bar-animated'), i * 80);
+        });
+        skillObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.skill-group').forEach(el => skillObserver.observe(el));
+
+  // ── Stat counter animation ──
+  function countUp(el, finalText, duration = 1400) {
+    const num = parseInt(finalText);
+    if (isNaN(num)) return;
+    const suffix = finalText.replace(/^[\d]+/, '');
+    let startTime = null;
+    function step(ts) {
+      if (!startTime) startTime = ts;
+      const p = Math.min((ts - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.floor(eased * num) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const v = entry.target.querySelector('.stat-value');
+        if (v) countUp(v, v.textContent.trim());
+        statObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.stat').forEach(el => statObserver.observe(el));
+
+  // ── Active nav highlight on scroll ──
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+      }
+    });
+  }, { threshold: 0.35, rootMargin: '-70px 0px -55% 0px' });
+  document.querySelectorAll('section[id]').forEach(s => navObserver.observe(s));
+
+  // ── Button mouse glow ──
+  document.querySelectorAll('.btn-primary').forEach(btn => {
+    btn.addEventListener('mousemove', e => {
+      const r = btn.getBoundingClientRect();
+      btn.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+      btn.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+    });
+  });
+
+  // ── Smooth scroll ──
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
